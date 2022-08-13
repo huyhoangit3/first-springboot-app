@@ -7,7 +7,6 @@ pipeline {
                 git(
                        url: 'git@github.com:huyhoangit3/first-springboot-app.git',
                        credentialsId: 'github-credentials',
-                       branch: "${branch}"
                 )
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
