@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping(path = "hello")
     public String sayHello() {
-        return "Hello Kubernetes Docker";
+        return "Hello Github webhook";
     }
 
     @GetMapping(path = "goodbye")
