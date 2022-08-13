@@ -9,7 +9,9 @@ pipeline {
                        credentialsId: 'github-credentials',
                 )
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                dir("/var/jenkins_home/workspace/FirstSpringBootApp") {
+                    sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
+                }
             }
             post {
                 // If Maven was able to run the tests, even if some of the test
