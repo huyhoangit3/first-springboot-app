@@ -11,4 +11,9 @@ public class HelloController {
     public String sayHello() {
         return "Hello Jenkins Pipeline";
     }
+
+    @GetMapping(path = "goodbye")
+    public String sayGoodbye() {
+        return "Goodbye Jenkins Pipeline";
+    }
 }

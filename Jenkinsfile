@@ -10,7 +10,7 @@ pipeline {
                 )
                 // Run Maven on a Unix agent.
                 dir("/var/jenkins_home/workspace/FirstSpringBootApp") {
-                    sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
+                    sh "/opt/maven3.8/bin/mvn -Dmaven.test.failure.ignore=true clean package"
                 }
             }
             post {
