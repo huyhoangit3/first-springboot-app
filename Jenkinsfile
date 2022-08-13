@@ -21,5 +21,12 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            steps {
+                dir("/var/jenkins_home/workspace/FirstSpringBootApp/target") {
+                    sh "scp *.war root@172.17.0.3/opt/tomcat8/webapps"
+                }
+            }
+        }
     }
 }

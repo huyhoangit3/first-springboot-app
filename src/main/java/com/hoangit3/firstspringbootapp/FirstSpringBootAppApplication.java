@@ -4,18 +4,24 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @PropertySource(value = "classpath:config.properties")
-public class FirstSpringBootAppApplication {
+public class FirstSpringBootAppApplication extends SpringBootServletInitializer {
 
     @Value("${my-name}")
     private String myName;
     @Value("${my-app}")
     private String myApp;
 
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+        return application.sources(FirstSpringBootAppApplication.class);
+    }
     public static void main(String[] args) {
         SpringApplication.run(FirstSpringBootAppApplication.class, args);
     }
