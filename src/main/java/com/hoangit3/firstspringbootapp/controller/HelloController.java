@@ -14,6 +14,6 @@ public class HelloController {
 
     @GetMapping(path = "goodbye")
     public String sayGoodbye() {
-        return "Goodbye Kubernetes Docker";
+        return "Goodbye Github webhook";
     }
 }
