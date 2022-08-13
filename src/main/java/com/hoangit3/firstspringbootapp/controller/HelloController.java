@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping(path = "hello")
     public String sayHello() {
-        return "Hello Hoang Anh";
+        return "Hello Kubernetes";
     }
 
     @GetMapping(path = "goodbye")
     public String sayGoodbye() {
-        return "Goodbye Anh Hoang";
+        return "Goodbye Kubernetes";
     }
 }
