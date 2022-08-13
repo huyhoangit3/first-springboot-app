@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping(path = "hello")
     public String sayHello() {
-        return "Hello Kubernetes";
+        return "Hello Kubernetes Docker";
     }
 
     @GetMapping(path = "goodbye")
     public String sayGoodbye() {
-        return "Goodbye Kubernetes";
+        return "Goodbye Kubernetes Docker";
     }
 }
